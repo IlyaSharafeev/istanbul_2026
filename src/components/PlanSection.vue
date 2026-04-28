@@ -1,5 +1,6 @@
 <script setup>
-import { img } from '../data/images.js'
+import { img, FALLBACK } from '../data/images.js'
+import AppImg from './AppImg.vue'
 </script>
 
 <template>
@@ -64,7 +65,7 @@ import { img } from '../data/images.js'
             <div class="tl-desc">Симит (~10–15 лир) с тележки + стакан чая (~30 лир). Или турецкий завтрак в кафе — сыр, оливки, яйца, мёд (~300 лир на двоих).</div>
             <div class="tl-tags"><span class="tag free">~30–50 лир/чел</span></div>
           </div>
-          <img class="tl-thumb" :src="img.simit" alt="Симит" loading="lazy" />
+          <AppImg :src="img.simit" alt="Симит" :fallback="FALLBACK" class="tl-thumb" />
         </div>
       </div>
 
@@ -80,7 +81,7 @@ import { img } from '../data/images.js'
               <span class="tag info">9:00–17:00</span>
             </div>
           </div>
-          <img class="tl-thumb" :src="img.hagiaSophia" alt="Айя-София" loading="lazy" />
+          <AppImg :src="img.hagiaSophia" alt="Айя-София" :fallback="FALLBACK" class="tl-thumb" />
         </div>
       </div>
 
@@ -93,7 +94,7 @@ import { img } from '../data/images.js'
             <div class="tl-desc">Напротив Айя-Софии. Закрыта во время намаза (~30 мин, 5 раз в день).</div>
             <div class="tl-tags"><span class="tag free">Бесплатно</span></div>
           </div>
-          <img class="tl-thumb" :src="img.blueMosque" alt="Голубая мечеть" loading="lazy" />
+          <AppImg :src="img.blueMosque" alt="Голубая мечеть" :fallback="FALLBACK" class="tl-thumb" />
         </div>
       </div>
 
@@ -106,7 +107,7 @@ import { img } from '../data/images.js'
             <div class="tl-desc">Кёфте с хлебом и айраном в lokanta. Или дёнер-дюрюм в лаваше. Ищите очередь из местных.</div>
             <div class="tl-tags"><span class="tag info">~150–200 лир/чел</span></div>
           </div>
-          <img class="tl-thumb" :src="img.doner" alt="Дёнер" loading="lazy" />
+          <AppImg :src="img.doner" alt="Дёнер" :fallback="FALLBACK" class="tl-thumb" />
         </div>
       </div>
 
@@ -122,7 +123,7 @@ import { img } from '../data/images.js'
               <span class="tag info">до 19:00</span>
             </div>
           </div>
-          <img class="tl-thumb" :src="img.grandBazaar" alt="Гранд Базар" loading="lazy" />
+          <AppImg :src="img.grandBazaar" alt="Гранд Базар" :fallback="FALLBACK" class="tl-thumb" />
         </div>
       </div>
 
@@ -135,7 +136,7 @@ import { img } from '../data/images.js'
             <div class="tl-desc">Разноцветные дома, узкие улочки. Лучшее освещение для фото — вечером. 20 мин на трамвае от Sultanahmet.</div>
             <div class="tl-tags"><span class="tag free">Бесплатно</span></div>
           </div>
-          <img class="tl-thumb" :src="img.balat" alt="Балат" loading="lazy" />
+          <AppImg :src="img.balat" alt="Балат" :fallback="FALLBACK" class="tl-thumb" />
         </div>
       </div>
 
@@ -148,7 +149,7 @@ import { img } from '../data/images.js'
             <div class="tl-desc">Слоёный бёрек с сыром + чечевичный суп (mercimek çorbası). В пекарнях Sultanahmet — дёшево и очень вкусно.</div>
             <div class="tl-tags"><span class="tag info">~150–200 лир/чел</span></div>
           </div>
-          <img class="tl-thumb" :src="img.borek" alt="Бёрек" loading="lazy" />
+          <AppImg :src="img.borek" alt="Бёрек" :fallback="FALLBACK" class="tl-thumb" />
         </div>
       </div>
     </div>
@@ -169,7 +170,7 @@ import { img } from '../data/images.js'
               <span class="tag info">+ Гарем 300 лир × 2</span>
             </div>
           </div>
-          <img class="tl-thumb" :src="img.topkapi" alt="Топкапы" loading="lazy" />
+          <AppImg :src="img.topkapi" alt="Топкапы" :fallback="FALLBACK" class="tl-thumb" />
         </div>
       </div>
 
@@ -182,7 +183,7 @@ import { img } from '../data/images.js'
             <div class="tl-desc">Подземное водохранилище VI века — атмосферно. 300м от Айя-Софии.</div>
             <div class="tl-tags"><span class="tag paid">~500 лир × 2 (~24 EUR)</span></div>
           </div>
-          <img class="tl-thumb" :src="img.cistern" alt="Базилика Цистерна" loading="lazy" />
+          <AppImg :src="img.cistern" alt="Базилика Цистерна" :fallback="FALLBACK" class="tl-thumb" />
         </div>
       </div>
 
@@ -195,7 +196,7 @@ import { img } from '../data/images.js'
             <div class="tl-desc">Автобус 22E от Kabataş. Мечеть прямо у Босфора.</div>
             <div class="tl-tags"><span class="tag free">Вход бесплатно</span></div>
           </div>
-          <img class="tl-thumb" :src="img.ortakoy" alt="Ортакой" loading="lazy" />
+          <AppImg :src="img.ortakoy" alt="Ортакой" :fallback="FALLBACK" class="tl-thumb" />
         </div>
       </div>
 
@@ -208,7 +209,7 @@ import { img } from '../data/images.js'
             <div class="tl-desc">Запечённая картошка с начинками. Есть у воды с видом на мечеть и Босфор. Лучший кумпир в городе.</div>
             <div class="tl-tags"><span class="tag info">~150–200 лир</span></div>
           </div>
-          <img class="tl-thumb" :src="img.kumpit" alt="Кумпир" loading="lazy" />
+          <AppImg :src="img.kumpit" alt="Кумпир" :fallback="FALLBACK" class="tl-thumb" />
         </div>
       </div>
 
@@ -221,7 +222,7 @@ import { img } from '../data/images.js'
             <div class="tl-desc">Башня снаружи (не поднимаемся). Улочки, кофейни. Barnahtan — бесплатная терраса с видом на башню.</div>
             <div class="tl-tags"><span class="tag free">Бесплатно</span></div>
           </div>
-          <img class="tl-thumb" :src="img.galata" alt="Галата" loading="lazy" />
+          <AppImg :src="img.galata" alt="Галата" :fallback="FALLBACK" class="tl-thumb" />
         </div>
       </div>
 
@@ -234,7 +235,7 @@ import { img } from '../data/images.js'
             <div class="tl-desc">Güllüoğlu в Karaköy — лучшая пахлава Стамбула. С фисташками или грецким орехом.</div>
             <div class="tl-tags"><span class="tag info">~100–150 лир за порцию</span></div>
           </div>
-          <img class="tl-thumb" :src="img.baklava" alt="Баклава" loading="lazy" />
+          <AppImg :src="img.baklava" alt="Баклава" :fallback="FALLBACK" class="tl-thumb" />
         </div>
       </div>
 
@@ -247,7 +248,7 @@ import { img } from '../data/images.js'
             <div class="tl-desc">1,4 км пешеходной улицы. Ретро-трамвай, кафе, магазины. Площадь Таксим в конце.</div>
             <div class="tl-tags"><span class="tag free">Бесплатно</span></div>
           </div>
-          <img class="tl-thumb" :src="img.istiklal" alt="Истикляль" loading="lazy" />
+          <AppImg :src="img.istiklal" alt="Истикляль" :fallback="FALLBACK" class="tl-thumb" />
         </div>
       </div>
 
@@ -260,7 +261,7 @@ import { img } from '../data/images.js'
             <div class="tl-desc">Адана-кебаб или урфа-кебаб с лавашем на боковых улицах. Funicular F2 с Таксима вниз → трамвай T1 до отеля.</div>
             <div class="tl-tags"><span class="tag info">~200–300 лир/чел</span></div>
           </div>
-          <img class="tl-thumb" :src="img.kofte" alt="Кебаб" loading="lazy" />
+          <AppImg :src="img.kofte" alt="Кебаб" :fallback="FALLBACK" class="tl-thumb" />
         </div>
       </div>
     </div>
@@ -278,7 +279,7 @@ import { img } from '../data/images.js'
             <div class="tl-desc">Пристань Eminönü. ~20 мин. Лучший вид на Стамбул — с воды.</div>
             <div class="tl-tags"><span class="tag info">По Istanbulkart</span></div>
           </div>
-          <img class="tl-thumb" :src="img.bosphorus" alt="Паром Босфор" loading="lazy" />
+          <AppImg :src="img.bosphorus" alt="Паром Босфор" :fallback="FALLBACK" class="tl-thumb" />
         </div>
       </div>
 
@@ -294,7 +295,7 @@ import { img } from '../data/images.js'
               <span class="tag info">🦪 Мидье долма — обязательно!</span>
             </div>
           </div>
-          <img class="tl-thumb" :src="img.kadikoy" alt="Кадыкёй" loading="lazy" />
+          <AppImg :src="img.kadikoy" alt="Кадыкёй" :fallback="FALLBACK" class="tl-thumb" />
         </div>
       </div>
 
@@ -310,7 +311,7 @@ import { img } from '../data/images.js'
               <span class="tag info">до 22:00 | посл. вход 21:15</span>
             </div>
           </div>
-          <img class="tl-thumb" :src="img.emaar" alt="Emaar SkyView" loading="lazy" />
+          <AppImg :src="img.emaar" alt="Emaar SkyView" :fallback="FALLBACK" class="tl-thumb" />
         </div>
       </div>
 
@@ -326,7 +327,7 @@ import { img } from '../data/images.js'
               <span class="tag info">9:00–22:45</span>
             </div>
           </div>
-          <img class="tl-thumb" :src="img.kizKulesi" alt="Девичья башня" loading="lazy" />
+          <AppImg :src="img.kizKulesi" alt="Девичья башня" :fallback="FALLBACK" class="tl-thumb" />
         </div>
       </div>
 
@@ -339,7 +340,7 @@ import { img } from '../data/images.js'
             <div class="tl-desc">От Üsküdar до Eminönü. Купить дондурма у Галатского моста — продавцы делают шоу, мороженое тягучее.</div>
             <div class="tl-tags"><span class="tag info">🍦 ~50–80 лир</span></div>
           </div>
-          <img class="tl-thumb" :src="img.dondurma" alt="Дондурма" loading="lazy" />
+          <AppImg :src="img.dondurma" alt="Дондурма" :fallback="FALLBACK" class="tl-thumb" />
         </div>
       </div>
 
@@ -355,7 +356,7 @@ import { img } from '../data/images.js'
               <span class="tag free">📍 Eminönü</span>
             </div>
           </div>
-          <img class="tl-thumb" :src="img.balikEkmek" alt="Балык-экмек" loading="lazy" />
+          <AppImg :src="img.balikEkmek" alt="Балык-экмек" :fallback="FALLBACK" class="tl-thumb" />
         </div>
       </div>
     </div>
@@ -385,7 +386,7 @@ import { img } from '../data/images.js'
             <div class="tl-desc">Египетский (пряный) базар — специи, сухофрукты, лукум. Лучше Гранд Базара для еды. Последние сувениры.</div>
             <div class="tl-tags"><span class="tag free">Вход бесплатно</span></div>
           </div>
-          <img class="tl-thumb" :src="img.egyptBazaar" alt="Египетский базар" loading="lazy" />
+          <AppImg :src="img.egyptBazaar" alt="Египетский базар" :fallback="FALLBACK" class="tl-thumb" />
         </div>
       </div>
 
